@@ -2,31 +2,34 @@ import React, { Component } from 'react';
 import Input from './input';
 import Content from './content';
 
+const initialState = {
+        color: '',
+        pluralNoun: '',
+        adjectiveOne: '',
+        celebOne: '',
+        adjectiveTwo: '',
+        nounOne: '',
+        numberOne: '',
+        numberTwo: '',
+        nounTwo: '',
+        adjectiveThree: '',
+        celebTwo: '',
+        celebThree: '',
+        adjectiveFour: '',
+        nounThree: '',
+        celebFour: '',
+        adjectiveFive: '',
+        contentVisible: false
+}
+
+
 
 class Card extends Component {
 
     constructor() {
         super()
 
-        this.state = {
-            color: '',
-            pluralNoun: '',
-            adjectiveOne: '',
-            celebOne: '',
-            adjectiveTwo: '',
-            nounOne: '',
-            numberOne: '',
-            numberTwo: '',
-            nounTwo: '',
-            adjectiveThree: '',
-            celebTwo: '',
-            celebThree: '',
-            adjectiveFour: '',
-            nounThree: '',
-            celebFour: '',
-            adjectiveFive: '',
-            contentVisible: false
-        }
+        this.state = initialState;
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
@@ -37,7 +40,11 @@ class Card extends Component {
 
     handleFormSubmit(event) {
         event.preventDefault()
-        this.setState({ contentVisible: !this.state.contentVisible})
+        if(this.state.contentVisible){
+            this.setState(initialState)
+        } else {
+            this.setState({ contentVisible: true})
+        }
     }
 
     render() {
@@ -71,7 +78,7 @@ class Card extends Component {
                     inputData.map(data => Input((data), this.handleInputChange))
                 }
                 </div>
-                <button type="submit" > {!this.state.contentVisible ? "Generate Mad Libs" : "Clear Form"} </button>
+                <button type="submit" > {this.state.contentVisible ? "Clear Form" : "Generate Mad Libs"} </button>
                 {
                     this.state.contentVisible ? <Content data = {this.state}/> : ""
                 }
