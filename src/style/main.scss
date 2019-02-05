@@ -34,4 +34,13 @@ body {
     width: 1240px;
     box-shadow: 0 4px 30px 0 rgba(0,0,0,.3);
     background-color: white;
+    
+    display: grid;
+    grid-template-rows: 1fr 36px;
+
+    &-inputs {
+        background-color: red;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
