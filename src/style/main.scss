@@ -12,7 +12,27 @@ body {
 
 
 .header{
-    align-content: center;
+    color: white;
+    text-align: center;
+    align-self: center;
+
+    h1{
+        font-family: 'Staatliches', cursive;
+        font-size: 4.5em;
+        
+    }
+    h3 {
+        font-family: 'Montserrat', cursive;
+        margin-top: -60px;
+        
+    }
+    
+    p{
+        font-family: 'Montserrat', cursive;
+        width: 403px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     &-skew {
         position: absolute;
@@ -21,9 +41,9 @@ body {
         left:0;
         height: 495px;
         width:100vw;
-        background-color: #94ccfd;
-        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 10%, 0 75%);
-        clip-path: polygon(0 0, 100% 0%, 100% 10%, 0 75%);
+        background-color: #50a9ff;
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 20%, 0 75%);
+        clip-path: polygon(0 0, 100% 0%, 100% 20%, 0 75%);
     }
     &-second-skew {
         position: absolute;
@@ -32,7 +52,7 @@ body {
         left:0;
         height: 495px;
         width:100vw;
-        background-color: #50a9ff;
+        background-color: #94ccfd;
         -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 35%);
         clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 35%);
     }
@@ -41,18 +61,20 @@ body {
 
 
 .card {
-    min-height: 736px;
+    min-height: 600px;
     max-height: 994px;
     width: 1240px;
-    box-shadow: 0 4px 30px 0 rgba(0,0,0,.3);
+    box-shadow: 0 4px 30px 0 rgba(0,0,0,.5);
     background-color: white;
-    border-radius: 7px;
-    
+    border-radius: 15px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+
     display: grid;
     grid-template-rows: 1fr 36px;
 
     &-inputs {
-        background-color: red;
+        //background-color: red;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-items: center;
@@ -63,14 +85,36 @@ body {
 .input {
     display:grid;
     grid-template-columns: 26px 1fr;
+    font-family: 'Montserrat', cursive;
+    column-gap: 5px;
+    text-align: center;
 
     &-title {
         grid-column: 2;
+        padding-top: 3px;
+        color:#50a9ff;
+        font-size: 12px;
+
     }
     input{
         grid-column: 2;
+        border:none;
+        font-size: 15px;
+        color:#444;
+        text-align: center;
+        border-bottom: 1px solid #444;
+        font-weight: 600;
     }
     &-number {
         grid-column: 1;
+        background-color: #50a9ff;
+        color: white;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 2px;
+        border-radius: 50%;
+        width: 24px;
+        
     }
 }
+
