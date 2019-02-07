@@ -61,33 +61,70 @@ body {
 
 
 .card {
-    min-height: 600px;
-    max-height: 994px;
+    //min-height: 300px;
+    max-height: 594px;
     width: 1240px;
     box-shadow: 0 4px 30px 0 rgba(0,0,0,.5);
     background-color: white;
     border-radius: 15px;
     margin-top: 3em;
     margin-bottom: 3em;
-
     display: grid;
     grid-template-rows: 1fr 36px;
+    
 
     &-inputs {
         //background-color: red;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 205px);
+        grid-template-rows: repeat(4, 46px);
         justify-items: center;
-        align-items: center;
+        align-items: center; 
+        grid-row-gap: 45px;
+        grid-column-gap: 70px;
+        margin-right: auto;
+        margin-left: auto;
+        
     }
+
+    button{
+        font-family: 'Staatliches', cursive;
+        letter-spacing: 1px;
+        color: white;
+        font-size: 1.3em;
+        border: none;
+        width: 25%;
+        justify-self: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,.5);
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-generate {
+        background-color: #94ccfd;
+        
+    }
+
+    &-clear {
+        background-color: #ccc;
+    }
+
+
 }
 
 .input {
     display:grid;
-    grid-template-columns: 26px 1fr;
+    grid-template-columns: 28px 1fr;
     font-family: 'Montserrat', cursive;
     column-gap: 5px;
     text-align: center;
+    margin-top: 100px;
+    
+  
+    
+    
 
     &-title {
         grid-column: 2;
@@ -104,6 +141,12 @@ body {
         text-align: center;
         border-bottom: 1px solid #444;
         font-weight: 600;
+        margin: 2px 0px;
+        transition: all .1s ease;
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid #94ccfd;
+        }
     }
     &-number {
         grid-column: 1;
