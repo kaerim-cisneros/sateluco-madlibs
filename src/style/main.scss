@@ -2,6 +2,13 @@ body {
     background-color: #f3f8fd;
     margin: 0px;
 }
+.gray{
+    background: #555;
+}
+
+.blue{
+    background: #50a9ff;
+}
 
 .home {
     position: relative;
@@ -67,8 +74,6 @@ body {
     box-shadow: 0 4px 30px 0 rgba(0,0,0,.5);
     background-color: white;
     border-radius: 15px;
-    margin-top: 3em;
-    margin-bottom: 3em;
     display: grid;
     grid-template-rows: 1fr 36px;
     
@@ -105,6 +110,7 @@ body {
 
     &-generate {
         background-color: #94ccfd;
+        transform: translateY(-205px);
         
     }
 
@@ -113,7 +119,7 @@ body {
     }
 
     &-content{
-        height: 160px;
+        height: 250px;
         width: 1100px;
         background-color:  #f3f8fd;
         justify-self: center;
@@ -132,10 +138,23 @@ body {
             margin-left: auto;
             margin-right: auto;
         }
+
+        &-label {
+            background-color: #555;
+            color: white;
+            font-size: .7em;
+            height: 1.1em;
+            width: 1.1em;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+        }
     }
 
 
 }
+
+
 
 .input {
     display:grid;
@@ -173,7 +192,6 @@ body {
     }
     &-number {
         grid-column: 1;
-        background-color: #50a9ff;
         color: white;
         font-size: 20px;
         line-height: 24px;
